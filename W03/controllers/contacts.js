@@ -49,7 +49,7 @@ const updateContact = async (req, res) => {
     .collection('Contacts')
     .replaceOne({ _id: id }, updateContact);
   if (response.modifiedCount > 0) {
-    res.status(201).json(response);
+    res.status(204).json(response);
   } else {
     res.status(500).json(response.error || "That didn't work..");
   }
@@ -62,7 +62,7 @@ const deleteContact = async (req, res) => {
     .collection('Contacts')
     .deleteOne({ _id: new ObjectId(req.params.id) });
   if (response.deletedCount > 0) {
-    res.status(201).json(response);
+    res.status(200).json(response);
   } else {
     res.status(500).json(response.error || "That didn't work..");
   }

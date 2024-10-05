@@ -18,7 +18,7 @@ content-type: application/json
 }
 
 ### Update a contact
-PUT http://localhost:8000/contacts/6700d2d3e546fc67a1c176d8
+PUT http://localhost:8000/contacts/6700d86aa7155d0671f07c59
 content-type: application/json
 
 {
@@ -30,13 +30,41 @@ content-type: application/json
 }
 
 ### Delete a contact
-DELETE http://localhost:8000/contacts/6700d2d3e546fc67a1c176d8
+DELETE http://localhost:8000/contacts/6700d86aa7155d0671f07c59
 
 
 
 // PRODUCTION Deploy 
 ###
-GET https://mongodbpractice-m3a2.onrender.com/contacts
+GET https://web-services-l03.onrender.com/contacts
 ###
 
+### Get one contact
+GET https://web-services-l03.onrender.com/contacts/66f8535309b4b094b83353e5
 
+### Create a contact
+POST https://web-services-l03.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Mason",
+    "lastName": "Weber",
+    "email": "masonweber@gmail.com",
+    "favoriteColor": "purple",
+    "birthday": "2003-09-08"
+}
+
+### Update a contact
+PUT https://web-services-l03.onrender.com/contacts/6700dd9b9cce50e47f78483a
+content-type: application/json
+
+{
+    "firstName": "Mason",
+    "lastName": "Weber",
+    "email": "webermason@yahoo.com",
+    "favoriteColor": "black",
+    "birthday": "2003-09-08"
+}
+
+### Delete a contact
+DELETE https://web-services-l03.onrender.com/contacts/6700dd9b9cce50e47f78483a
