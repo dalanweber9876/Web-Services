@@ -1,5 +1,11 @@
 /Photos
 /Sandbox
 /todoListApi
-/W02
-.DS_Store
+/W02/Contacts
+/W02/node_modules
+/W02/Team Assignment
+/W01/node_modules
+.env
+/w03/node_modules
+/w04/node_modules
+/W04/Team Assignment
