@@ -1,0 +1,29 @@
+[
+  {
+    "companyName": "Tech Solutions Inc.",
+    "position": "Software Engineer",
+    "applicationDate": "2024-09-15",
+    "status": "Interviewing",
+    "contactPerson": "John Doe",
+    "followUpDate": "2024-10-01",
+    "notes": "First interview went well, waiting for second round."
+  },
+  {
+    "companyName": "Green Energy Corp.",
+    "position": "Energy Analyst",
+    "applicationDate": "2024-08-25",
+    "status": "Rejected",
+    "contactPerson": "Jane Smith",
+    "followUpDate": null,
+    "notes": "Received rejection email on 2024-09-10."
+  },
+  {
+    "companyName": "FinTech Innovations",
+    "position": "Product Manager",
+    "applicationDate": "2024-10-05",
+    "status": "Pending",
+    "contactPerson": "Mark Johnson",
+    "followUpDate": "2024-10-20",
+    "notes": "Submitted application, waiting for response."
+  }
+]
