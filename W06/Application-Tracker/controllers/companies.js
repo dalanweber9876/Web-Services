@@ -17,6 +17,9 @@ const getAll = async (req, res) => {
 };
 
 const getSingle = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid company id to find a company');
+  }
   const userId = new ObjectId(req.params.id);
   await mongodb
     .getDb()
@@ -54,6 +57,9 @@ const createNewCompany = async (req, res) => {
 };
 
 const updateCompany = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid company id to find a company');
+  }
   const id = new ObjectId(req.params.id);
   const updateCompany = {
     name: req.body.name,
@@ -76,6 +82,9 @@ const updateCompany = async (req, res) => {
 };
 
 const deleteCompany = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid company id to find a company');
+  }
   const id = new ObjectId(req.params.id);
   const response = await mongodb
     .getDb()

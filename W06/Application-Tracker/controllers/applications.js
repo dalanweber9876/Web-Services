@@ -17,6 +17,9 @@ const getAll = async (req, res) => {
 };
 
 const getSingle = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid application id to find a application');
+  }
   const userId = new ObjectId(req.params.id);
   await mongodb
     .getDb()
@@ -55,6 +58,9 @@ const createNewApplication = async (req, res) => {
 };
 
 const updateApplication = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid application id to find a application');
+  }
   const id = new ObjectId(req.params.id);
   const updateApplication = {
     position: req.body.position,
@@ -79,6 +85,9 @@ const updateApplication = async (req, res) => {
 };
 
 const deleteApplication = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid application id to find a application');
+  }
   const id = new ObjectId(req.params.id);
   const response = await mongodb
     .getDb()
