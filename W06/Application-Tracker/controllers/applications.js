@@ -2,37 +2,44 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
-  await mongodb
-    .getDb()
-    .db('Application-Tracker')
-    .collection('Applications')
-    .find()
-    .toArray((err, lists) => {
-      if (err) {
-        res.status(400).json({ message: err });
-      }
-      res.setHeader('Content-Type', 'application/json');
-      res.status(200).json(lists);
-    });
+  try {
+    const lists = await mongodb
+      .getDb()
+      .db('Application-Tracker')
+      .collection('Applications')
+      .find()
+      .toArray();
+
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).json(lists);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
 };
 
 const getSingle = async (req, res) => {
   if (!ObjectId.isValid(req.params.id)) {
-    res.status(400).json('Must use a valid application id to find a application');
+    return res.status(400).json('Must use a valid application id to find an application');
   }
+
   const userId = new ObjectId(req.params.id);
-  await mongodb
-    .getDb()
-    .db('Application-Tracker')
-    .collection('Applications')
-    .find({ _id: userId })
-    .toArray((err, result) => {
-      if (err) {
-        res.status(400).json({ message: err });
-      }
-      res.setHeader('Content-Type', 'application/json');
-      res.status(200).json(result[0]);
-    });
+  try {
+    const result = await mongodb
+      .getDb()
+      .db('Application-Tracker')
+      .collection('Applications')
+      .find({ _id: userId })
+      .toArray();
+
+    if (result.length === 0) {
+      return res.status(404).json({ message: 'Application not found' });
+    }
+
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).json(result[0]);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
 };
 
 const createNewApplication = async (req, res) => {
