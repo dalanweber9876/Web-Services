@@ -1,0 +1,116 @@
+// LOCALHOST 
+### Get all applications
+GET http://localhost:8000/applications
+
+### Get one application
+GET http://localhost:8000/applications/671411e13150697475b8d00d
+
+### Create an application
+POST http://localhost:8000/applications HTTP/1.1
+content-type: application/json
+
+{
+  "position": "Senior Software Engineer",
+  "applicationDate": "2024-10-19",
+  "status": "Pending",
+  "contactPerson": "Charles Finch",
+  "followUpDate": "2024-10-26",
+  "notes": "Just submitted it. Anxiously awaiting.",
+  "companyName": "Knots and Stitch Crochet"
+}
+
+### Update an application
+PUT http://localhost:8000/applications/671411e13150697475b8d00d
+content-type: application/json
+
+{
+  "position": " Software Engineer",
+  "applicationDate": "2024-09-15",
+  "status": "Interviewing",
+  "contactPerson": "John Doe",
+  "followUpDate": "2024-10-01",
+  "notes": "First interview went well, waiting for second round.",
+  "companyName": "Tech Solutions Inc."
+}
+
+### Delete an application
+DELETE http://localhost:8000/applications/671c1ae9fcb32b4454146df6
+
+
+
+### Get all companies
+GET http://localhost:8000/companies
+
+### Get one company
+GET http://localhost:8000/companies/671411c83150697475b8d009
+
+### Create a company
+POST http://localhost:8000/companies HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Knot and Stitch Crochet",
+  "industry": "Web Developer",
+  "location": "Rexburg, Idaho",
+  "contactEmail": "knotandstitchcrochet@gmail.com",
+  "website": "N/A",
+  "interested": true
+}
+
+### Update a company
+PUT http://localhost:8000/companies/671c241439fff247aa5ae5f3
+content-type: application/json
+
+{
+  "name": "Knot and Stitch Crochet",
+  "industry": "Web Developer",
+  "location": "Rexburg, Idaho",
+  "contactEmail": "knotandstitchcrochet@yahoo.com",
+  "website": "N/A yet",
+  "interested": true
+}
+
+### Delete a company
+DELETE http://localhost:8000/companies/67145756e6d76ea3b76190d9
+
+
+
+// PRODUCTION Deploy 
+### Get all applications
+GET http://web-services-w05.onrender.com/applications
+
+### Get one application
+GET https://web-services-w05.onrender.com/applications/671411e13150697475b8d00d
+
+### Create an application
+POST https://web-services-w05.onrender.com/applications HTTP/1.1
+content-type: application/json
+
+{
+  "position": "Senior Software Engineer",
+  "applicationDate": "2024-10-19",
+  "status": "Pending",
+  "contactPerson": "Charles Finch",
+  "followUpDate": "2024-10-26",
+  "notes": "Just submitted it. Anxiously awaiting.",
+  "companyName": "Knots and Stitch Crochet"
+}
+
+### Get all companies
+GET https://web-services-w05.onrender.com/companies
+
+### Get one company
+GET https://web-services-w05.onrender.com/companies/671411c83150697475b8d009
+
+### Create a company
+POST https://web-services-w05.onrender.com/companies HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Knot and Stitch Crochet",
+  "industry": "Web Developer",
+  "location": "Rexburg, Idaho",
+  "contactEmail": "knotandstitchcrochet@gmail.com",
+  "website": "N/A",
+  "interested": true
+}
