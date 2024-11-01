@@ -5,7 +5,7 @@
     "description": "Applications API",
     "version": "1.0.0"
   },
-  "host": "web-services-l06.onrender.com",
+  "host": "w07cse341.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
@@ -103,6 +103,9 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -263,6 +266,9 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
