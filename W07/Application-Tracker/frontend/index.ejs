@@ -36,6 +36,10 @@
             grid-column: 2/3;
             margin: 50px auto;
         }
+        .google-login {
+            grid-column: 2/3;
+            margin: 25px auto;
+        }
         input[type="text"],
         input[type="password"] {
             width: 50%;
@@ -62,6 +66,7 @@
         .logout-button:hover {
             background-color: #45a049;
         }
+        
     </style>
 </head>
 <body>
@@ -85,6 +90,9 @@
                 <input type="submit" value="Login" />
             </form>
         </div>
+        <form action="/loginGoogle" method="POST" class="google-login">
+            <input type="submit" class="google-button" value="Login with Google" />
+        </form>
     <% } %>
 </body>
 </html>
