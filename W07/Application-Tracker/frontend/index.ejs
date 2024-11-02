@@ -70,7 +70,7 @@
     </style>
 </head>
 <body>
-    <% if (!isAuthenticated) { %>
+    <% if (isAuthenticated) { %>
         <h1>Here is the secret message:</h1> 
         <p>"The squirrels are plotting to take over the world!"</p>
         <form action="/logout" method="POST" class="logout-container">
