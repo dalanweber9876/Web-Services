@@ -76,13 +76,13 @@ DELETE http://localhost:8000/companies/671d63247b87fcf74bc8a56e
 
 // PRODUCTION Deploy 
 ### Get all applications
-GET http://w07cse341.onrender.com/applications
+GET https://web-services-w08.onrender.com//applications
 
 ### Get one application
-GET https://w07cse341.onrender.com/applications/671411e13150697475b8d00d
+GET https://web-services-w08.onrender.com/applications/671411e13150697475b8d00d
 
 ### Create an application
-POST https://w07cse341.onrender.com/applications HTTP/1.1
+POST https://web-services-w08.onrender.com/applications HTTP/1.1
 content-type: application/json
 
 {
@@ -96,7 +96,7 @@ content-type: application/json
 }
 
 ### Update an application
-PUT https://w07cse341.onrender.com/applications/671d6392a0656eab5d8c0b57
+PUT https://web-services-w08.onrender.com/applications/671d6392a0656eab5d8c0b57
 content-type: application/json
 
 {
@@ -110,17 +110,17 @@ content-type: application/json
 }
 
 ### Delete an application
-DELETE https://w07cse341.onrender.com/applications/671d6392a0656eab5d8c0b57
+DELETE https://web-services-w08.onrender.com/applications/671d6392a0656eab5d8c0b57
 
 
 ### Get all companies
-GET https://w07cse341.onrender.com/companies
+GET https://web-services-w08.onrender.com/companies
 
 ### Get one company
-GET https://w07cse341.onrender.com/companies/671411c83150697475b8d009
+GET https://web-services-w08.onrender.com/companies/671411c83150697475b8d009
 
 ### Create a company
-POST https://w07cse341.onrender.com/companies HTTP/1.1
+POST https://web-services-w08.onrender.com/companies HTTP/1.1
 content-type: application/json
 
 {
@@ -132,7 +132,7 @@ content-type: application/json
 }
 
 ### Update a company
-PUT https://w07cse341.onrender.com/companies/671d63ffa0656eab5d8c0b58
+PUT https://web-services-w08.onrender.com/companies/671d63ffa0656eab5d8c0b58
 content-type: application/json
 
 {
@@ -145,4 +145,4 @@ content-type: application/json
 }
 
 ### Delete a company
-DELETE http://w07cse341.onrender.com/companies/671d63ffa0656eab5d8c0b58
+DELETE https://web-services-w08.onrender.com/companies/671d63ffa0656eab5d8c0b58
